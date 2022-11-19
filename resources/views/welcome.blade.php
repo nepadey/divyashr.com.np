@@ -468,7 +468,7 @@
     </section>
     <footer class="footer section section-light">
         <div class="container">
-            <p class="copyright text-center mb-0">&copy; Divya 2020 | All Right Reserved</p>
+            <p class="copyright text-center mb-0">&copy; Divya {{date("Y")}} | All Right Reserved</p>
         </div>
     </footer>
 </div>
