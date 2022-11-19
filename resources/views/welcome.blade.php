@@ -344,7 +344,7 @@
                             <div class="portfolio-item--desc-in">
                                 <h1 class="text-white">Database Skill</h1>
                                 <ol>
-                                    <li class="ms-2 text-white">SQl</li>
+                                    <li class="ms-2 text-white">SQL</li>
                                     <li class="ms-2 text-white">Mongo</li>
                                 </ol>
                             </div>
