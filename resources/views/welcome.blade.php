@@ -344,7 +344,7 @@
                             <div class="portfolio-item--desc-in">
                                 <h1 class="text-white">Database Skill</h1>
                                 <ol>
-                                    <li class="ms-2 text-white">SQl</li>
+                                    <li class="ms-2 text-white">SQL</li>
                                     <li class="ms-2 text-white">Mongo</li>
                                 </ol>
                             </div>
@@ -468,7 +468,7 @@
     </section>
     <footer class="footer section section-light">
         <div class="container">
-            <p class="copyright text-center mb-0">&copy; Divya 2020 | All Right Reserved</p>
+            <p class="copyright text-center mb-0">&copy; Divya {{date("Y")}} | All Right Reserved</p>
         </div>
     </footer>
 </div>
