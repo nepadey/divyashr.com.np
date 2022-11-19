@@ -1,11 +1,9 @@
 name: divyashr.com.np Deployement
 on:
-  workflow_run:
+  push:
     branches:
       - develop
       - issue/3-github-action-to-deploy
-    types:
-      - completed
   workflow_dispatch:
     inputs:
       deploy:
