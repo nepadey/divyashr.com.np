@@ -1,0 +1,31 @@
+name: divyashr.com.np Deployement
+on:
+  workflow_run:
+    branches:
+      - develop
+      - issue/3-github-action-to-deploy
+    types:
+      - completed
+  workflow_dispatch:
+    inputs:
+      deploy:
+        description: Enter 'staging' to deploy to staging
+        required: true
+        default: 'no'
+
+jobs:
+  deploy-to-staging:
+    #    if: github.event.inputs.deploy == 'staging' || github.event.workflow_run.conclusion == 'success'
+    name: 🎉 Deploy to Staging
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v3
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.2
+        with:
+          server: ftpupload.net
+          username: ${{ secrets.username }}
+          password: ${{ secrets.password }}
+          server-dir: 'divyashr.com.np/htdocs'
+
