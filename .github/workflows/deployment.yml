@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - develop
-      - issue/3-github-action-to-deploy
   workflow_dispatch:
     inputs:
       deploy:
@@ -12,8 +11,7 @@ on:
         default: 'no'
 
 jobs:
-  deploy-to-staging:
-    #    if: github.event.inputs.deploy == 'staging' || github.event.workflow_run.conclusion == 'success'
+  deployment:
     name: 🎉 Deploy to Staging
     runs-on: ubuntu-latest
     steps:
