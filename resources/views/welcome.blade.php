@@ -423,12 +423,6 @@
                         </div>
                     </div>
                 </div>
-
-                <?php if (isset($_POST['form_submitted'])): ?> 
-                    <h2>Thank You </h2>
-                    <?php else: ?>
-                            <h2>Register properly</h2>
-
                 <div class="contact-form mt-5">
                     <form action="/" method="POST" >
                     @csrf
@@ -466,7 +460,6 @@
                                 <button class="btn hover-state">Submit</button>
                             </div>
                         </div>
-                        @endif
                     </form>
                 </div>
             </div>
