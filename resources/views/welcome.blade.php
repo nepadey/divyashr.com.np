@@ -62,8 +62,6 @@
 </head>
 <body data-spy="scroll" data-target=".navbar">
 
-
-
 <div id="preloader" class="preloader">
     <div class="spinner-grow text-dark" role="status">
         <span class="sr-only">Loading...</span>
@@ -431,7 +429,6 @@
                     <?php else: ?>
                             <h2>Register properly</h2>
 
-
                 <div class="contact-form mt-5">
                     <form action="/" method="POST" >
                     @csrf
@@ -439,30 +436,27 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-group mt-3 wow fadeInUp" data-wow-duration="1.5s">
-                                    <input name="name" id="name" type="text" class="form-control b-box"
-                                         >
+                                    <input name="name" id="name" type="text" class="form-control b-box" placeholder="Your Name.." required/>                           
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group mt-3 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".2s">
-                                    <input name="email" id="email" type="email" class="form-control b-box"
-                                           >
+                                    <input name="email" id="email" type="email" class="form-control b-box"placeholder="Email address." required>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="form-group mt-3 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
-                                    <input type="text" class="form-control b-box" name="subject" id="subject"
-                                          />
+                                    <input type="text" class="form-control b-box" name="subject" id="subject"placeholder="Your Subject.." required/>                       
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="form-group mt-3 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".4s">
-									<textarea name="comments" id="comments" rows="4" class="form-control b-box"
-                                              "></textarea>
+									<textarea name="comments" id="comments" rows="4" class="form-control b-box"placeholder=" Leave Your comment.." required/>
+                                </textarea>
                                 </div>
                             </div>
                         </div>
@@ -472,7 +466,7 @@
                                 <button class="btn hover-state">Submit</button>
                             </div>
                         </div>
-                        <?php endif ?> 
+                        @endif
                     </form>
                 </div>
             </div>

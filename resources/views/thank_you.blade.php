@@ -7,10 +7,7 @@
 
 <html>
 <body>
-
-          
-          
-          <form style="text-align:center; width=50%; height=50%; padding: top 50%;">
+      <form style="text-align:center; width=50%; height=50%; padding: top 50%;">
           
             <label>
             <h1> Thank You</h1>
@@ -19,9 +16,5 @@
           <button>Close</button>
           
           </form>
-
-
-        
-
 </body>
 </html>
