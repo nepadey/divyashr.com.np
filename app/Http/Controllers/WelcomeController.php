@@ -25,16 +25,13 @@ class WelcomeController extends Controller
      */
     public function store(Request $request)
     {
-    //    dd($request->all()); // todo : save the data to database
-    // dd($request->name);
        $inquery = Inquery::create([
         'name' =>$request->name,
         'email'=> $request->email,
         'subject'=> $request->subject,
         'message'=> $request->comments,
      ]);
-    //  dd($inquery->name);
-        return view('thank_you', ['inquery'=>$inquery]);
+    return view('thank_you', ['inquery'=>$inquery]);
         
     }
     
