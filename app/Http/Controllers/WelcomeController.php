@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use  App\Models\Inquery;
 
 class WelcomeController extends Controller
 {
@@ -24,8 +25,13 @@ class WelcomeController extends Controller
      */
     public function store(Request $request)
     {
-       // dd($request->all()); // todo : save the data to database
-        return view('thank_you');
+       $inquery = Inquery::create([
+        'name' =>$request->name,
+        'email'=> $request->email,
+        'subject'=> $request->subject,
+        'message'=> $request->comments,
+     ]);
+    return view('thank_you', ['inquery'=>$inquery]);
         
     }
     
