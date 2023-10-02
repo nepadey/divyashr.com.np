@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use  App\Models\Inquery;
 
-class WelcomeController extends Controller
+class StaticController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+        return view('static.welcome');
     }
 
     /**
@@ -31,8 +31,8 @@ class WelcomeController extends Controller
         'subject'=> $request->subject,
         'message'=> $request->comments,
      ]);
-    return view('thank_you', ['inquery'=>$inquery]);
-        
+    return view('static.thank_you', ['inquery'=>$inquery]);
+
     }
-    
+
 }
