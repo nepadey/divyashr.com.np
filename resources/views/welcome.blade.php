@@ -1,34 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Divya - Developer</title>
-    <meta name="description" content="Divya Shrestha - Developer"/>
-    <meta name="author" content="Divya"/>
-    <meta name="keywords" content="web, web developer, developer, divya, Divya,Divya Shrestha, Shrestha Divya design website
-"/>
-    <meta name="theme-color" content="#2a2d35">
+@extends('layout/app')
 
-    <!--	og tags -->
-    <meta property="og:title" content="Divya Shrestha - Developer"/>
-    <meta property="og:image" content="{{asset('assets/images/avatar.jpg')}}"/>
-    <meta property="og:url" content="{{asset('/')}}"/>
-    <meta property="og:description"
-          content="Passionate problem solver adoring work with new innovation and settle the issue by breaking them to littler simpler and solve them."/>
-    <meta property="og:locale" content="np"/>
-    <meta property="og:site_name" content="Personal"/>
-
-    <!--	<meta property="og:type" content="video.movie"/>-->
-    <!--	<meta property="og:audio" content="https://example.com/bond/theme.mp3"/>-->
-    <!--	<meta property="og:determiner" content="the"/>-->
-    <!--	<meta property="og:video" content="https://example.com/bond/trailer.swf"/>-->
-
-    <link rel="icon" href="{{asset('assets/icon/favicon.jpg')}}" type="image/jpg">
-    <link rel="stylesheet" href="{{asset('assets/css/vendor.css')}}"/>
-    <link href="{{asset('assets/css/settings.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/css/custom.css')}}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('assets/css/justin-red.css')}}">
+@section('style')
     <style>
         .services-list-1 {
             background-image: url("{{asset('assets/images/custom/web.jpg')}}");
@@ -59,38 +31,9 @@
             font-style: oblique;
         }
     </style>
-</head>
-<body data-spy="scroll" data-target=".navbar">
+@endsection
 
-<div id="preloader" class="preloader">
-    <div class="spinner-grow text-dark" role="status">
-        <span class="sr-only">Loading...</span>
-    </div>
-</div>
-<div class="page-wrapper">
-    <nav class="navbar navbar-expand-lg navbar-custom navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand  mr-auto " href="index-14.html">Divya</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
-                    aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-                <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="60">
-                    <path class="line top"
-                          d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"></path>
-                    <path class="line middle" d="m 30,50 h 40"></path>
-                    <path class="line bottom"
-                          d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40"></path>
-                </svg>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarToggler">
-                <ul class="navbar-nav ml-auto">
-                    <li><a class="nav-link active" href="#home">Home</a></li>
-                    <li><a class="nav-link" href="#services">Working Area</a></li>
-                    <li><a class="nav-link" href="#skills">Skills</a></li>
-                    <li><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+@section('content')
     <section class="section-home " id="home">
         <div class="overlay d-flex justify-content-center align-items-center">
             <div class="overlay-wrap section-head">
@@ -319,7 +262,8 @@
                     <a href="{{asset('assets/images/custom/php.jpg')}}"
                        class="portfolio-item--content simple-ajax-popup">
                         <div class="portfolio-item--img b-box">
-                            <img src="{{asset('assets/images/custom/php.jpg')}}" class="img-fluid mx-auto" alt="work-img">
+                            <img src="{{asset('assets/images/custom/php.jpg')}}" class="img-fluid mx-auto"
+                                 alt="work-img">
                         </div>
                         <div class="portfolio-item--desc d-flex justify-content-center align-items-center">
                             <div class="portfolio-item--desc-in">
@@ -424,33 +368,37 @@
                     </div>
                 </div>
                 <div class="contact-form mt-5">
-                    <form action="/" method="POST" >
-                    @csrf
+                    <form action="/" method="POST">
+                        @csrf
                         <h5 class="section-subHead mb-2"> Contact Form</h5>
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-group mt-3 wow fadeInUp" data-wow-duration="1.5s">
-                                    <input name="name" id="name" type="text" class="form-control b-box" placeholder="Your Name.." required/>                           
+                                    <input name="name" id="name" type="text" class="form-control b-box"
+                                           placeholder="Your Name.." required/>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group mt-3 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".2s">
-                                    <input name="email" id="email" type="email" class="form-control b-box"placeholder="Email address." required>
+                                    <input name="email" id="email" type="email" class="form-control b-box"
+                                           placeholder="Email address." required>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="form-group mt-3 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".3s">
-                                    <input type="text" class="form-control b-box" name="subject" id="subject"placeholder="Your Subject.." required/>                       
+                                    <input type="text" class="form-control b-box" name="subject" id="subject"
+                                           placeholder="Your Subject.." required/>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="form-group mt-3 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".4s">
-									<textarea name="comments" id="comments" rows="4" class="form-control b-box"placeholder=" Leave Your comment.." required/>
-                                </textarea>
+                                    <textarea name="comments" id="comments" rows="4" class="form-control b-box"
+                                              placeholder=" Leave Your comment.." required/>
+                                    </textarea>
                                 </div>
                             </div>
                         </div>
@@ -465,15 +413,8 @@
             </div>
         </div>
     </section>
-    <footer class="footer section section-light">
-        <div class="container">
-            <p class="copyright text-center mb-0">&copy; Divya {{date("Y")}} | All Right Reserved</p>
-        </div>
-    </footer>
-</div>
-<script src="{{asset('assets/js/vendor.js')}}"></script>
-<script src="{{asset('assets/js/particles.min.js')}}"></script>
-<script src="{{asset('assets/js/particlesjs-config-4.js')}}"></script>
-<script src="{{asset('assets/js/custom.js')}}"></script>
-</body>
-</html>
+@endsection
+
+@section('script')
+
+@endsection
